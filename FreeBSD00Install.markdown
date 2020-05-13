@@ -71,3 +71,7 @@ Now follow:
 20. At Final Configuration, exit by `Apply configuration and exit installer`.
 21. No to manual configuration.
 22. Reboot.
+23. At first reboot screen, below are some commands for extra information
+  - `dmesg` to display or see system specs (hardware) [watch UCBT_BSD10x_006_Post-Installation_Checks.mp4]
+  - `reboot` to restart the computer
+  - `poweroff` to shutdown the computer
