@@ -1,4 +1,4 @@
- WiFi setup
+# WiFi setup
 
 If you don’t have a wired connection but just wireless.
 My advice is to setup the wireless connection before anything else.
