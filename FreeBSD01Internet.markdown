@@ -1,4 +1,6 @@
-# WiFi setup
+# Internet setup
+
+## WiFi setup
 
 If you don’t have a wired connection but just wireless.
 My advice is to setup the wireless connection before anything else.
@@ -94,3 +96,24 @@ network={
     and [also here.](http://www.thegeekstuff.com/2009/11/ping-tutorial-13-effective-ping-command-examples/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+TheGeekStuff+(The+Geek+Stuff))
 
 9. `service netif restart` to apply changes done in step-8.
+
+## Ethernet setup
+
+1. You can use DHCP and SLAAC auto-discovery on most home networks via `vi /etc/rc.conf`
+  ```
+  #hostname="neuralgraphs"
+  # Enable DHCP for em0 (identified as em0 from less /var/run/dmesg.boot) and don't let dhclient block
+  background_dhclient="YES"
+  ifconfig_em0="DHCP"
+  ifconfig_em0_ipv6="inet6 accept_rtadv"
+  ```
+
+2. You can bring up the interface and get a DHCP address immediately by issuing
+  ```
+  ifconfig em0 up
+  ```
+  and
+  ```
+  dhclient em0
+  ```
+  again substituting the name of your own interface (here its `em0`).
