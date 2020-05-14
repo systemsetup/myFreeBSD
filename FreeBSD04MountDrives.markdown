@@ -177,3 +177,91 @@ now is a good time to do so. In this example my user is *joe*.
   ```
 
 ## [Add a second HDD](https://www.freebsd.org/doc/handbook/disks-adding.html)
+
+1. [Identify the device.](https://forums.freebsd.org/threads/45411/)
+```
+less /var/run/dmesg.boot
+```
+Here it was identified as `ada0`
+
+2. Wipe the HDD clean
+```
+gpart destroy –F ada0
+```
+
+3. Create the GPT partition scheme and then add a single partition.
+```
+gpart create -s GPT ada0
+```
+
+4. To improve performance on newer disks with larger hardware block sizes, the partition is aligned to one megabyte boundaries.
+```
+gpart add -t freebsd-ufs -a 1M ada0
+```
+
+5. See disk partition information.
+```
+gpart show ada0
+```
+
+6. Create file system in the new partition on the new disk.
+```
+newfs –U /dev/ada0p1
+```
+
+7. Create an empty directory as a **mountpoint**; a location for mounting the new disk in the original disk's file system.
+```
+mkdir /my_second_hdd
+```
+
+8. Add an entry to `/etc/fstab` so that the new disk will be mounted automatically at startup.
+```
+/dev/ada0p1	  /my_second_hdd	  ufs	  rw	  2	  2
+```
+
+## Mount usb drives.
+
+### Setup to mount usb drives (especially for non-root users) [*Carefully* read the pre-requisite.] (https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/usb-disks.html)
+
+1. List the HDD's and any usb-pen drive connected.
+```
+camcontrol devlist
+```
+
+2. List the connected usb-pen drives, i.e. all the connected `da`'s, i.e., `da*`.
+```
+ls /dev/da*
+```
+
+3. Change owner (`chown`); below gives username (*joe*) in the group (`operator`) the folder (*/flashmedia*) access.
+```
+chown    joe:operator    /mnt/flashmedia
+```
+  [Note that the group name is `operator` because `/etc/devfs.rules` has the line](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/usb-disks.html)
+  ```
+  add path 'da[0-9]\*'    mode 0660   group   operator
+  ```
+
+### [Mount connected usb-pendrive (root or normal user)](http://www.unix.com/shell-programming-and-scripting/135969-unmount-usb-disk.html)
+
+1. [Get the name of the connected usb.](https://forums.freebsd.org/threads/25079/)
+```
+ls /dev/da*
+```
+Here it was identified as `da0s1`.
+
+2. [Get the format type of the usb named `da0s1`.](https://forums.freebsd.org/threads/25079/)
+```
+file –s /dev/da0s1
+```
+
+3. Mounts the **FAT** formatted `da0s1` usb to the */flashmedia* folder.
+```
+mount_msdosfs /dev/da0s1 /mnt/flashmedia
+```
+
+4. Unmount the usb device.
+```
+umount /mnt/flashmedia
+```
+
