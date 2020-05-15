@@ -105,7 +105,7 @@ hw.psm.synaptics_support=1
   - `snd_driver_load="YES"`
     * [More on loading sound subsystem.](https://cooltrainer.org/a-freebsd-desktop-howto/)
   - `hw.psm.synaptics_support=1`
-    * [More on synaptic support.](For more options https://wiki.freebsd.org/SynapticsTouchpad)
+    * [More on synaptic support.](https://wiki.freebsd.org/SynapticsTouchpad)
     
 4. Enable everything by setting `vi /etc/rc.conf`
 ```
