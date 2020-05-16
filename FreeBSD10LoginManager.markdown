@@ -123,7 +123,7 @@ echo "exec dwm" >> ~/.xinitrc
 Because the `~/.xinitrc` file is in the `/root` directory SLiM login is only as root.
    - To allow SLim login for other users does
      ```
-     cp ~/.xinitrc /usr/home/lungsi/.xinitrc
+     cp ~/.xinitrc /usr/home/lungsi/
      ```
    - To find list of users or name of users
      ```
