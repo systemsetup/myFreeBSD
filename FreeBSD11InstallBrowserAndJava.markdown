@@ -7,7 +7,6 @@ pkg install openjdk8
 
 2. [IcedTea-Web](http://www.freshports.org/java/icedtea-web) project provides a Free Software web browser plugin
 running applets written in the Java.
-2.1 Installation by building `icetea-web`
 ```
 pkg install icedtea-web
 ```
