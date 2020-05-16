@@ -9,4 +9,9 @@ cd /usr/ports/x11-wm/dwm/ && make install clean
 ```
 
 # 2. Set it up.
+## 2.1. If its not already done install [`slim`](https://www.freshports.org/x11/slim)
+```
+pkg install slim
+```
+## 2.2. 
 echo "exec dwm" >> .xinitrc
