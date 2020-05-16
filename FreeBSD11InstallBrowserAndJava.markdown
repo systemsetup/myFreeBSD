@@ -35,5 +35,5 @@ pkg install surf-browser
 
 7. Install [`mupdf`](https://www.freshports.org/graphics/mupdf/); a lightweight PDF, XPS, and E-book viewer.
 ```
-cd /usr/ports/graphics/mupdf/ && make install clean
+pkg install mupdf
 ```
