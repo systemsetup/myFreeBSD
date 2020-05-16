@@ -16,7 +16,13 @@ pkg install p7zip
 ```
 To invoke/call it type `7z`.
 
-4. Optionally, [`rox-filer`](http://www.freshports.org/x11-fm/rox-filer) graphical file manager for X11.
+4. [Simple X terminal](https://www.freshports.org/x11/sterm)
+```
+pkg install sterm
+```
+[st is a minimalistic X terminal.](https://st.suckless.org/)
+
+5. Optionally, [`rox-filer`](http://www.freshports.org/x11-fm/rox-filer) graphical file manager for X11.
 ```
 pkg install rox-filer
 ```
