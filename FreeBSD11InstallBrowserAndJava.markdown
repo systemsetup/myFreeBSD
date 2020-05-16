@@ -32,7 +32,12 @@ pkg install chromium
 ```
 Note that the [executable is actually chrome and not chromium.](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/desktop-browsers.html)
 
-6. Install [`mupdf`](https://www.freshports.org/graphics/mupdf/); a lightweight PDF, XPS, and E-book viewer.
+6. Install [surf](https://www.freshports.org/www/surf)
+```
+pkg install surf-browser
+```
+
+7. Install [`mupdf`](https://www.freshports.org/graphics/mupdf/); a lightweight PDF, XPS, and E-book viewer.
 ```
 cd /usr/ports/graphics/mupdf/ && make install clean
 ```
