@@ -88,6 +88,16 @@ echo "exec dwm" >> ~/.xinitrc
 	   Comment=This session logs you into Window Maker
 	   Type=Application
 	   ```
+   - Eg: **Create a `dwm.desktop`**
+     * In `vi /usr/local/share/xsessions/dwm.desktop` file enter the following
+	   ```
+	   [Desktop Entry]
+	   Encoding=UTF-8
+	   Name=dynamic window manager
+	   Exec=/usr/local/bin/dwm
+	   Comment=This session logs you into dynamic window manager
+	   Type=Application
+	   ```
 6. Enable graphical login.
    - In the [`vi /etc/rc.conf`](http://daemon-notes.com/articles/desktop/slim) file enter the following
      ```
