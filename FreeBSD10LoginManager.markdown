@@ -61,6 +61,8 @@ echo "exec dwm" >> ~/.xinitrc
    ```
    cd /usr/local/share/ && mkdir xsessions
    ```
+   - This might return `mkdir: xsessions: File exists`.
+   - If so move to next step.
 2. Open `vi /usr/local/etc/slim.conf` file.
 3. Add below in the `slim.conf` file.
    ```
