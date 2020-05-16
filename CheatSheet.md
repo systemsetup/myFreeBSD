@@ -21,4 +21,6 @@
 | **a**ll the above info        | `uname -a`             |
 | cpu information               | `dmesg \| grep CPU`    |
 | real and available memory     | `dmesg \| grep memory` |
+| connected devices information | `geom disk list`       |
+| see availabe hard drive space | `df -h`                |
 | how long a system has been up | `uptime`               |
