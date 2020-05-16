@@ -1,7 +1,7 @@
 # Setup Xorg for GUI environment.
 
 ## Method-1
-The fastest way to install Xorg is using [`pkg`]().
+The fastest way to install Xorg is using [`pkg`](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/x-install.html).
 ```
 pkg install xorg
 ```
