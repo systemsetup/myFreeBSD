@@ -2,7 +2,9 @@
 
 ## Method-1
 The fastest way to install Xorg is using [`pkg`]().
-```pkg install xorg```
+```
+pkg install xorg
+```
 However, if what you want is flexibility see the method below.
 
 ## Method-2
