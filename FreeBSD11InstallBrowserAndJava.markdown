@@ -2,15 +2,16 @@
 
 1. JAVA as [OpenJDK](http://www.freshports.org/java/openjdk8) in place of the binary Oracle JRE.
 ```
-cd /usr/ports/java/openjdk8/ && make install clean
+pkg install openjdk8
 ```
 
 2. [IcedTea-Web](http://www.freshports.org/java/icedtea-web) project provides a Free Software web browser plugin
 running applets written in the Java.
 2.1 Installation by building `icetea-web`
 ```
-cd /usr/ports/java/icedtea-web/ && make install clean
+pkg install icedtea-web
 ```
+
 2.2 If you encounter problems installing icedtea-web from the port, install from the pre-build binary.
 ```
 pkg install icedtea-web
