@@ -1,9 +1,15 @@
 # Setup Xorg for GUI environment.
 
+## Method-1
+The fastest way to install Xorg is using [`pkg`]().
+```pkg install xorg```
+However, if what you want is flexibility see the method below.
+
+## Method-2
 In [`/etc/rc.conf`](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/x-config.html)
 you must enable `hald_enable="YES"` and `dbus_enable="YES"`
 
-## Install `xorg`
+### Install `xorg`
 1. Go to `ports` directory for `xorg`.
 ```
 cd /usr/ports/x11/xorg
@@ -21,7 +27,7 @@ make install
 cd /usr/ports/x11/xorg/ && make rmconfig && make config-recursive reinstall clean
 ```
 
-## [Configure `xorg`.](https://www.freebsd.org/doc/handbook/x-config.html)
+### [Configure `xorg`.](https://www.freebsd.org/doc/handbook/x-config.html)
 It is important to note that
 - Video cards, monitors, and input devices are automatically detected and do not require any manual configuration.
 - Do not create `xorg.conf` or run a `-configure` step unless automatic configuration fails.
