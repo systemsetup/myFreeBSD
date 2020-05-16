@@ -12,11 +12,6 @@ running applets written in the Java.
 pkg install icedtea-web
 ```
 
-2.2 If you encounter problems installing icedtea-web from the port, install from the pre-build binary.
-```
-pkg install icedtea-web
-```
-
 3. Install [firefox](http://www.freshports.org/www/firefox).
 ```
 pkg install firefox
