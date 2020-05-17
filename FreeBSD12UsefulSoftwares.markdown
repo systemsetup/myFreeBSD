@@ -12,7 +12,7 @@ pkg install texlive-full
 ```
 pkg install mutt
 ```
-To connect to gmail you will also need to
+To connect to gmail you will also need [openssl](https://www.freshports.org/security/openssl/)
 ```
 pkg install -y openssl
 ```
