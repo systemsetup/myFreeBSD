@@ -23,4 +23,5 @@
 | real and available memory     | `dmesg \| grep memory` |
 | connected devices information | `geom disk list`       |
 | see availabe hard drive space | `df -h`                |
+| battery life/status           | `apm`                  |
 | how long a system has been up | `uptime`               |
