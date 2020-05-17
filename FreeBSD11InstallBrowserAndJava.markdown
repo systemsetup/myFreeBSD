@@ -31,8 +31,3 @@ Note that the [executable is actually chrome and not chromium.](https://www.free
 ```
 pkg install surf-browser
 ```
-
-7. Install [`mupdf`](https://www.freshports.org/graphics/mupdf/); a lightweight PDF, XPS, and E-book viewer.
-```
-pkg install mupdf
-```
