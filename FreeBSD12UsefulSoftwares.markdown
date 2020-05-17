@@ -5,7 +5,7 @@ pkg install mupdf
 
 2. Install [`latex`]()
 ```
-to decide
+pkg install texlive-full
 ```
 
 3. Install [`mutt`](https://www.freshports.org/mail/mutt)
