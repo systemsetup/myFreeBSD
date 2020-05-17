@@ -12,3 +12,7 @@ pkg install texlive-full
 ```
 pkg install mutt
 ```
+To connect to gmail you will also need to
+```
+pkg install -y openssl
+```
