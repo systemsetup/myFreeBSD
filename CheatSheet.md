@@ -8,6 +8,9 @@
 | kill a terminal (window)          | `[Shift]+[Alt]+[c]`      |
 | float mode                        | `[Alt]+[f]`              |
 | tiling mode (fullscreen terminal) | `[Alt]+[t]`              |
+| horizontal tiles in tiling mode   | `[Alt]+[i]`              |
+| vertical tiles in tiling mode     | `[Alt]+[d]`              |
+| monocale mode (fullscreen window) | `[Alt]+[m]`              |
 | quit dwm                          | `[Shift]+[Alt]+[q]`      |
 
 # Commands for system information
