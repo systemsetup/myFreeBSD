@@ -31,3 +31,8 @@ Note that the [executable is actually chrome and not chromium.](https://www.free
 ```
 pkg install surf-browser
 ```
+
+7. Install [lynx](https://www.freshports.org/www/lynx/) if all the above browsers are resource hungry.
+```
+pkg install lynx
+```
