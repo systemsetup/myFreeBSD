@@ -71,6 +71,10 @@ portsnap fetch update
   ```
   make install clean choose default settings
   ```
+  or simply just
+  ```
+  pkg install portupgrade
+  ```
   
   Third-party softwares installed through the package manager ends up in `/usr/local` where it mirrors the hierarchy of `/usr`.
   *To have them in two places gives a fairly clean separation of the base system from the packages*.
