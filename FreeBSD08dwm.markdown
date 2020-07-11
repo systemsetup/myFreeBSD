@@ -7,6 +7,10 @@ Alternatively,
 ```
 cd /usr/ports/x11-wm/dwm/ && make install clean
 ```
+Or,
+```
+pkg install kde5
+```
 
 # 2. Set it up.
 ## 2.1. If its not already done install [`slim`](https://www.freshports.org/x11/slim)
