@@ -16,3 +16,7 @@ To connect to gmail you will also need [openssl](https://www.freshports.org/secu
 ```
 pkg install -y openssl
 ```
+4. Install [`intellij IDEA`](https://www.freshports.org/java/intellij/)
+```
+pkg install intellij
+```
