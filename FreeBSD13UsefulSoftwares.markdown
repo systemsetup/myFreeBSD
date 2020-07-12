@@ -20,3 +20,20 @@ pkg install -y openssl
 ```
 pkg install intellij
 ```
+5. Install [`docker-machine`](https://www.freshports.org/sysutils/docker-machine/)
+```
+pkg install docker-machine
+```
+6. Install [docker client](https://www.freshports.org/sysutils/docker/)
+```
+pkg install docker
+```
+7. Install [`gimp`](https://www.freshports.org/graphics/gimp/)
+```
+pkg install gimp
+```
+8. Install [`inkscape`](https://www.freshports.org/graphics/inkscape/)
+```
+pkg install inkscape
+```
+```
