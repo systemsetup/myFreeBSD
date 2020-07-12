@@ -30,6 +30,15 @@ pkg install -y nvidia-xconfig
 
 # 3. Install Linux programs and libraries
 Because `x11/nvidia-driver` port no longer installs Linux programs and libraries if you plan to use linuxulator you will want to install these libraries.
+But before installing these you must [configure linux binary compatibility](https://www.freebsd.org/doc/handbook/linuxemu-lbc-install.html).
+
+## 3.1. Load Linux kernel module
+```
+kldload linux
+kldload linux64
+```
+You can use `kldstat` to verify.
+## 3.2. Install the NVIDIA linux programs
 ```
 pkg install -y linux-nvidia-libs
 ```
