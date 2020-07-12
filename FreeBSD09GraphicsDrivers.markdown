@@ -27,3 +27,9 @@ pkg install -y nvidia-settings
 pkg install -y nvidia-xconfig
 ```
 [Read these comments](https://forums.freebsd.org/threads/howto-install-and-configure-nvidia-drivers.3038/) for discussions on installing NVIDIA drivers in FreeBSD.
+
+# 3. Install Linux programs and libraries
+Because `x11/nvidia-driver` port no longer installs Linux programs and libraries if you plan to use linuxulator you will want to install these libraries.
+```
+pkg install -y linux-nvidia-libs
+```
