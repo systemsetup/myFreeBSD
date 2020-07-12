@@ -30,4 +30,4 @@ pkg install slim
 ## 2.2. For `dwm`
 echo "exec dwm" >> .xinitrc
 ## 2.3. For KDE
-echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
+echo "exec ck-launch-session startplasma-x11" >> .xinitrc
