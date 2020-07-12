@@ -28,6 +28,18 @@ For more on kde refer to the [documentation.](https://www.freebsd.org/doc/handbo
 pkg install slim
 ```
 ## 2.2. For `dwm`
+```
 echo "exec dwm" >> .xinitrc
+```
 ## 2.3. For KDE
+```
 echo "exec ck-launch-session startplasma-x11" >> .xinitrc
+```
+If this does not work install SDDM because KDE no longer develops its KDM (KDE Desktop Manager)
+```
+pkg install -y sddm
+```
+Then enable it in `vi /etc/rc.conf` with
+```
+sddm_enable="YES"
+```
