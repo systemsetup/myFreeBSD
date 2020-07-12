@@ -3,18 +3,26 @@ Although its possible to download [NVIDIA drivers for freeBSD](https://www.nvidi
 ```
 pkg install -y nvidia-driver
 ```
-Then [setup NVIDIA](https://docs.freebsd.org/doc/7.3-RELEASE/usr/share/doc/en/articles/compiz-fusion/nvidia-setup.html)
+Then [setup NVIDIA.](https://forums.freebsd.org/threads/howto-setup-xorg-with-nvidias-driver.52311/)
+Note that [these instructions are outdated.](https://docs.freebsd.org/doc/7.3-RELEASE/usr/share/doc/en/articles/compiz-fusion/nvidia-setup.html)
 ## 1.1. Load the kernel module created by the driver at boot time.
-This is done by adding below to `vi /boot/loader.conf`
+This is done by adding below to `vi /etc/rc.conf`
 ```
-nvidia_load="YES"
+kld_list="nvidia-modeset"
 ```
 ## 1.2. Enable the driver.
-Add the line below to `vi /etc/X11/xorg.conf`
+Create the `/xorg.conf.d` directory as follows
 ```
-Driver      "nvidia"
+mkdir -p /usr/local/etc/X11/xorg.conf.d
 ```
-**Note** that if the line `Driver      "nv"` already exist in the file change it above, i.e. `"nv"` -> `"nvidia"`
+then, add below into `vi /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf`
+```
+Section "Device"
+        Identifier "NVIDIA Card"
+        VendorName "NVIDIA Corporation"
+        Driver "nvidia"
+EndSection
+```
 
 # 2. Optional tools/utilities for NVIDIA
 Although not required it is handy to install some NVIDIA tools.
