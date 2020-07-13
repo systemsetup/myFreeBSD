@@ -3,12 +3,10 @@
 ```
 pkg install mupdf
 ```
-
 ### 1.2. Install [`latex`]()
 ```
 pkg install texlive-full
 ```
-
 ### 1.3. Install [`mutt`](https://www.freshports.org/mail/mutt)
 ```
 pkg install mutt
@@ -16,6 +14,10 @@ pkg install mutt
 To connect to gmail you will also need [openssl](https://www.freshports.org/security/openssl/)
 ```
 pkg install -y openssl
+```
+### 1.4. Install [`maxima`](https://www.freshports.org/math/maxima/), a symbolic mathematics program
+```
+pkg install maxima
 ```
 ## 2. Programming Environment
 ### 2.1. Clojure
