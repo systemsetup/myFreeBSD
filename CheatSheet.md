@@ -30,3 +30,4 @@
 | see availabe hard drive space | `df -h`                |
 | battery life/status           | `apm`                  |
 | how long a system has been up | `uptime`               |
+| kill `startx` to enter console| [Alt]+[Shift]+[F1]     |
