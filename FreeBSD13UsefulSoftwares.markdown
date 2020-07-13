@@ -11,9 +11,9 @@ pkg install texlive-full
 ```
 pkg install dia
 ```
-### 1.4. Install [`maxima`](https://www.freshports.org/math/maxima/), a symbolic mathematics program
+### 1.4. Install [`maxima`](https://www.freshports.org/math/maxima/) and [`wxmaxima`](https://www.freshports.org/math/wxmaxima/), a symbolic mathematics program
 ```
-pkg install maxima
+pkg install -y maxima wxmaxima
 ```
 ### 1.5. Install [`mutt`](https://www.freshports.org/mail/mutt)
 ```
