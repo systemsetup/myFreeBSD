@@ -261,8 +261,21 @@ mount_msdosfs /dev/da0s1 /mnt/flashmedia
 ```
 
 4. For [NTFS](http://kflu.github.io/2018/02/03/2018-02-03-freebsd-ntfs/)
+First install [`fusefs-ntfs`](https://www.freshports.org/sysutils/fusefs-ntfs/)
+```
+pkg install fusefs-ntfs
+```
+Then,
+```
+echo -e "fuse_load=\"YES\"" >> /boot/loader.conf
+```
+Now you can mount with
 ```
 ntfs-3g /dev/da0s1 /mnt/flashmedia
+```
+or
+```
+mount -t ntfs-3g /dev/da0s1 /mnt/flashmedia
 ```
 
 5. Unmount the usb device.
