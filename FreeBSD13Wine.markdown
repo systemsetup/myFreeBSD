@@ -31,4 +31,7 @@ wine control
 ```
 wine uninstaller
 ```
-## 2.4. f
+## 2.4. Example with [Zotero](https://www.zotero.org/download/)
+```
+wine Zotero-x-y-z.exe
+```
