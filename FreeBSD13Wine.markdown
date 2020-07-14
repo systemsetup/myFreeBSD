@@ -35,3 +35,4 @@ wine uninstaller
 ```
 wine Zotero-x-y-z.exe
 ```
+Note that this should install/work even without accepting the prompts to install [`wine-mono`](https://www.freshports.org/emulators/wine-mono) and [`wine-gecko`](https://www.freshports.org/emulators/wine-gecko).
