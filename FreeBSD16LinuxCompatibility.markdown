@@ -21,3 +21,14 @@ Some linux programs need `tmpfs` to be mounted on `/compat/linux/dev/shm`. This 
 ```
 tmpfs   /compat/linux/dev/shm    tmpfs   rw,mode=1777    0   0
 ```
+
+# 2. Install binaries
+## 2.1 rpm packages
+First install [`rpm4`](https://www.freshports.org/archivers/rpm4/)
+```
+pkg install rpm4
+```
+Then, got to `cd /compat/linux` and then
+```
+rpm2cpio < /path/to/linux.archive.rpm | cpio -id
+```
