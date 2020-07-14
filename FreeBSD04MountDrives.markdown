@@ -221,7 +221,7 @@ mkdir /my_second_hdd
 
 ## Mount usb drives.
 
-### Setup to mount usb drives (especially for non-root users) [*Carefully* read the pre-requisite.] (https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/usb-disks.html)
+### Setup to mount usb drives (especially for non-root users) [*Carefully* read the pre-requisite.](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/usb-disks.html)
 
 1. List the HDD's and any usb-pen drive connected.
 ```
