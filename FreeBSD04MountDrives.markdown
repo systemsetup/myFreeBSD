@@ -260,8 +260,14 @@ file –s /dev/da0s1
 mount_msdosfs /dev/da0s1 /mnt/flashmedia
 ```
 
-4. Unmount the usb device.
+4. For [NTFS](http://kflu.github.io/2018/02/03/2018-02-03-freebsd-ntfs/)
+```
+ntfs-3g /dev/da0s1 /mnt/flashmedia
+```
+
+5. Unmount the usb device.
 ```
 umount /mnt/flashmedia
 ```
+
 
