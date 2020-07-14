@@ -1,28 +1,18 @@
 # Install System Tools
 
-1. [`git`](https://www.freshports.org/devel/git/)
+1. [`git`](https://www.freshports.org/devel/git/), [`wget`](https://www.freshports.org/ftp/wget), [7zip](https://www.freshports.org/archivers/p7zip/)
 ```
-pkg install git
+pkg install -y git wget p7zip
 ```
+To invoke/call 7zip type `7z`.
 
-2. [`wget`](https://www.freshports.org/ftp/wget)
-```
-pkg install wget
-```
-
-3. [7zip](https://www.freshports.org/archivers/p7zip/)
-```
-pkg install p7zip
-```
-To invoke/call it type `7z`.
-
-4. [Simple X terminal](https://www.freshports.org/x11/sterm)
+2. [Simple X terminal](https://www.freshports.org/x11/sterm)
 ```
 pkg install sterm
 ```
 [st is a minimalistic X terminal.](https://st.suckless.org/)
 
-5. Optionally, [`rox-filer`](http://www.freshports.org/x11-fm/rox-filer) graphical file manager for X11.
+3. Optionally, [`rox-filer`](http://www.freshports.org/x11-fm/rox-filer) graphical file manager for X11.
 ```
 pkg install rox-filer
 ```
