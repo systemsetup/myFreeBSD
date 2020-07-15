@@ -1,6 +1,6 @@
 # Internet setup
 
-## WiFi setup
+## 1. WiFi setup
 
 If you don’t have a wired connection but just wireless.
 My advice is to setup the wireless connection before anything else.
@@ -97,7 +97,7 @@ network={
 
 9. `service netif restart` to apply changes done in step-8.
 
-## Ethernet setup
+## 2. Ethernet setup
 
 1. You can use DHCP and SLAAC auto-discovery on most home networks via `vi /etc/rc.conf`
   ```
@@ -117,3 +117,14 @@ network={
   dhclient em0
   ```
   again substituting the name of your own interface (here its `em0`).
+
+Alterntive to 1 and 2 above for GL-iNET
+
+1. Use `ifconfig` to identify the ethernet port name. Mine was igb0
+2. Enter below to `vi /etc/rc.conf`
+```
+hostname="my.server.com"
+ifconfig_igb0="DHCP"
+```
+3. Enter `http://192.168.8.1` in the address bar of a browser.
+4. Set-up and get connected.
