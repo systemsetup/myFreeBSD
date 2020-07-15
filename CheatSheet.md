@@ -31,3 +31,6 @@
 | battery life/status           | `apm`                  |
 | how long a system has been up | `uptime`               |
 | kill `startx` to enter console| [Alt]+[Shift]+[F1]     |
+| list global environment       | `setenv`               |
+| set global environment        | `setenv Dummy "this"`  |
+| unset a variable              | `unsetenv Dummy`       |
