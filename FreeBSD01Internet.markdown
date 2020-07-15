@@ -118,7 +118,7 @@ network={
   ```
   again substituting the name of your own interface (here its `em0`).
 
-**Alternative to 1 and 2 above for GL-iNET**
+**[Alternative](https://www.freebsd.org/doc/en/articles/linux-users/network.html) to 1 and 2 above for GL-iNET**
 
 1. Use `ifconfig` to identify the ethernet port name. Mine was igb0
 2. Enter below to `vi /etc/rc.conf`
