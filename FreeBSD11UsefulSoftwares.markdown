@@ -27,6 +27,10 @@ To connect to gmail you will also need [openssl](https://www.freshports.org/secu
 ```
 pkg install -y openssl
 ```
+### 1.7. Install [`homebank`](https://www.freshports.org/finance/homebank/)
+```
+pkg install -y homebank
+```
 ## 2. Programming Environment
 ### 2.1. Clojure
 #### 2.1.1. Install [Leiningen](https://www.freshports.org/devel/leiningen/)
