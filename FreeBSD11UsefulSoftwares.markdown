@@ -64,4 +64,7 @@ pkg install gimp
 ```
 pkg install inkscape
 ```
+### 3.3. Install [`opensacd`](https://www.freshports.org/cad/openscad/)
+```
+pkg install opensacd
 ```
