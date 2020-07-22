@@ -68,3 +68,8 @@ pkg install inkscape
 ```
 pkg install opensacd
 ```
+## 4. Multimedia
+### 4.1. Install [`mpv`](https://www.freshports.org/multimedia/mpv/)
+```
+pkg install mpv
+```
