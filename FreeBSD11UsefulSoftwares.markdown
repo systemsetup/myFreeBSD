@@ -31,6 +31,10 @@ pkg install -y openssl
 ```
 pkg install -y homebank
 ```
+### 1.8. Install [`zim`](https://www.freshports.org/deskutils/zim)
+```
+pkg install -y zim
+```
 ## 2. Programming Environment
 ### 2.1. Clojure
 #### 2.1.1. Install [Leiningen](https://www.freshports.org/devel/leiningen/)
