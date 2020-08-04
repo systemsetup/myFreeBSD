@@ -3,6 +3,7 @@
 ```
 pkg install en-freebsd-doc
 ```
+Also see this [discussion](https://forums.freebsd.org/threads/how-to-install-handbook.45218/) and refer to FreeBSD [books and articles](https://www.freebsd.org/docs/books.html).
 
 2. [`git`](https://www.freshports.org/devel/git/), [`wget`](https://www.freshports.org/ftp/wget), [7zip](https://www.freshports.org/archivers/p7zip/)
 ```
