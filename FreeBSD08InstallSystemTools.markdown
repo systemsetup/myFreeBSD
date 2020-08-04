@@ -1,18 +1,22 @@
 # Install System Tools
+1. If you did not manage to install the [FreeBSD Handbook](https://www.freshports.org/misc/freebsd-doc-en)
+```
+pkg install en-freebsd-doc
+```
 
-1. [`git`](https://www.freshports.org/devel/git/), [`wget`](https://www.freshports.org/ftp/wget), [7zip](https://www.freshports.org/archivers/p7zip/)
+2. [`git`](https://www.freshports.org/devel/git/), [`wget`](https://www.freshports.org/ftp/wget), [7zip](https://www.freshports.org/archivers/p7zip/)
 ```
 pkg install -y git wget p7zip
 ```
 To invoke/call 7zip type `7z`.
 
-2. [Simple X terminal](https://www.freshports.org/x11/sterm)
+3. [Simple X terminal](https://www.freshports.org/x11/sterm)
 ```
 pkg install sterm
 ```
 [st is a minimalistic X terminal.](https://st.suckless.org/)
 
-3. Optionally, [`rox-filer`](http://www.freshports.org/x11-fm/rox-filer) graphical file manager for X11.
+4. Optionally, [`rox-filer`](http://www.freshports.org/x11-fm/rox-filer) graphical file manager for X11.
 ```
 pkg install rox-filer
 ```
