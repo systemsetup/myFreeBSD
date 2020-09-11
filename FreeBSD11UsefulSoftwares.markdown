@@ -11,10 +11,16 @@ pkg install dia
 ```
 pkg install -y vim tmux
 ```
-### 1.4. Install [`latex`]()
+### 1.4. Install `latex`
+For installing the [full Texlive package](https://www.freshports.org/print/texlive-full/)
 ```
 pkg install texlive-full
 ```
+Alternatively, especially if you are installing KDE then you may choose [Kile, KDE Integrated LaTeX Editing Environment](https://kile.sourceforge.io/) from [`editors/kile/`](https://www.freshports.org/editors/kile/)
+```
+pkg install kile
+```
+
 ### 1.5. Install [`mupdf`](https://www.freshports.org/graphics/mupdf/); a lightweight PDF, XPS, and E-book viewer.
 ```
 pkg install mupdf
