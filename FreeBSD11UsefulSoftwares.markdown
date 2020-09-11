@@ -41,6 +41,11 @@ pkg install -y homebank
 ```
 pkg install -y zim
 ```
+### 1.9. Install [`kalzium`](https://www.freshports.org/science/kalzium/)
+```
+pkg install -y kalzium
+```
+
 ## 2. Programming Environment
 ### 2.1. Clojure
 #### 2.1.1. Install [Leiningen](https://www.freshports.org/devel/leiningen/)
