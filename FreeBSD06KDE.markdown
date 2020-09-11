@@ -15,7 +15,7 @@ hald_enable="YES"
 ```
 For more on kde refer to the [documentation.](https://www.freebsd.org/doc/handbook/x11-wm.html)
 
-# 2. Set up KDE
+# 4. Set up KDE
 ```
 echo "exec ck-launch-session startplasma-x11" >> .xinitrc
 ```
@@ -28,4 +28,16 @@ pkg install -y sddm
 Then enable it in `vi /etc/rc.conf` with
 ```
 sddm_enable="YES"
+```
+
+# 5. Troubleshooting
+
+## 5.1. Reset KDE Plasma Taskbar (panel with widgets) to default
+Delete plasma file and restart.
+```
+rm -rf ~/.config/plasma-org.kde.plasma.desktop-appletsrc
+```
+Or you may move the file as a backup and restart.
+```
+mv ~/.config/plasma-org.kde.plasma.desktop-appletsrc ~/.config/plasma-org.kde.plasma.desktop-appletsrc-old
 ```
