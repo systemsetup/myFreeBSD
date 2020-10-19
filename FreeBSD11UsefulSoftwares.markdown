@@ -45,6 +45,10 @@ pkg install -y zim
 ```
 pkg install -y kalzium
 ```
+### 1.10. Install [`transmission`](https://www.freshports.org/net-p2p/transmission/)
+```
+pkg install -y transmission
+```
 
 ## 2. Programming Environment
 ### 2.1. Clojure
