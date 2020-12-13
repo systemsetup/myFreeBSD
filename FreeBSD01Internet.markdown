@@ -118,7 +118,7 @@ network={
   ```
   again substituting the name of your own interface (here its `em0`).
 
-**[Alternative](https://www.freebsd.org/doc/en/articles/linux-users/network.html) to 1 and 2 above for GL-iNET**
+**[Alternative](https://www.freebsd.org/doc/en/articles/linux-users/network.html) to 1 and 2 above for [GL-iNET](https://www.gl-inet.com/)**
 
 1. Use `ifconfig` to identify the ethernet port name. Mine was igb0
 2. Enter below to `vi /etc/rc.conf`
@@ -128,3 +128,8 @@ ifconfig_igb0="DHCP"
 ```
 3. Enter `http://192.168.8.1` in the address bar of a browser.
 4. Set-up and get connected.
+
+## 3. GUI [WiFi Network Manager](https://www.freshports.org/net-mgmt/wifimgr/)
+```
+pkg install wifimgr
+```
