@@ -14,8 +14,8 @@ Now follow:
 4. Choose `zfs`
 5. For zfs configuration, choose default except the following:
    * Rename pool name to hostname (eg. neuralgraphszpool if you chose it as the hostname; notice hostname=neuralgraphs or pool name is neuralgraphs.comzpool if hostname=neuralgraphs.com)
-   * Encrypt Disks? YES
-   * Encrypt Swap? YES
+   * Encrypt Disks? NO
+   * Encrypt Swap? NO
    * Swap Size
      if RAM is single digit, Swap Size = 2x physical memory
      if RAM is double digit, Swap Size = 1/2 x physical memory (or if you want you can still choose 2x)
@@ -32,7 +32,7 @@ Now follow:
 14. Skip the IPv6 configuration.
 15. In "Search" for Resolver Configuration enter hostname (eg. neuralgraphs).
 16. Region and Time Zone setup.
-17. In System Configuration, choose sshd, moused and ntpd. (don’t choose crash dump and cpu sync)
+17. In System Configuration, choose sshd, moused and ~ntpd~. (don’t choose crash dump and cpu sync)
 18. If you see another configuration (step after 17), just choose delete tmp directory option. Although it is encouraged to choose crash dumps (for debugging) I avoid it.
 18. If you see another configuration (step after 17), just choose delete tmp directory option. Although it is encouraged to choose crash dumps (for debugging) I avoid it.
 19. Now choose add user (one is enough if it is a personal computer).
