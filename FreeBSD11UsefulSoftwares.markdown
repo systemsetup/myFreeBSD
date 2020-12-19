@@ -83,9 +83,9 @@ pkg install gimp
 ```
 pkg install inkscape
 ```
-### 3.3. Install [`opensacd`](https://www.freshports.org/cad/openscad/)
+### 3.3. Install [`openscad`](https://www.freshports.org/cad/openscad/)
 ```
-pkg install opensacd
+pkg install openscad
 ```
 ## 4. Multimedia
 ### 4.1. Install [`mpv`](https://www.freshports.org/multimedia/mpv/)
