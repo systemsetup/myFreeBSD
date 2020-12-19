@@ -66,7 +66,7 @@ Now follow:
     Add another user? (yes/no): no
     Goodbye!
     ```
-    Remember to type `wheel` in Login group. wheel membership is necessary to gain root privileges for administration tasks. You can choose csh if zsh is not available or even sh as default.
+    Remember to type `wheel` in Login group. wheel membership is necessary to gain root privileges for administration tasks: otherwise you will not be able to use the `su` command in the console. You can choose csh if zsh is not available or even sh as default.
     [More on user group setup](https://www.freebsd.org/doc/handbook/users-synopsis.html)
 20. At Final Configuration, exit by `Apply configuration and exit installer`.
 21. No to manual configuration.
