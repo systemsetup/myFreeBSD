@@ -45,8 +45,13 @@ But before installing these you must [configure linux binary compatibility](http
 kldload linux
 kldload linux64
 ```
-You can use `kldstat` to verify.
+You can use `kldstat` to verify. Load them before attempting to build/install (next step).
 ## 3.2. Install the NVIDIA linux programs
 ```
 pkg install -y linux-nvidia-libs
+```
+## 3.3. Enable Linux compatibility
+In `vi /etc/rc.conf` add
+```
+linux_enable="YES"
 ```
