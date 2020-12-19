@@ -156,7 +156,6 @@ Section "Files"
     FontPath        "/usr/local/share/fonts/cyrillic/"
     FontPath        "/usr/local/share/fonts/dejavu/"
     FontPath        "/usr/local/share/fonts/encodings/"
-    FontPath        "/usr/local/share/fonts/util/"
     FontPath        "/usr/local/share/fonts/webfonts/"
 EndSection
 ```
