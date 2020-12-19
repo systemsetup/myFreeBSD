@@ -146,7 +146,7 @@ cd /usr/local/share/   && ls
 Below is an example `vi /etc/X11/xorg.conf` file.
 ```
 Section "Files"
-    ModulePath      "/usr/local/lib/xorg/modules"
+    ModulePath      "/usr/local/lib/xorg/modules/"
     FontPath        "/usr/local/share/fonts/misc/"
     FontPath        "/usr/local/share/fonts/OTF/"
     FontPath        "/usr/local/share/fonts/TTF/"
