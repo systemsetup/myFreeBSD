@@ -50,6 +50,14 @@ You can use `kldstat` to verify. Load them before attempting to build/install (n
 ```
 pkg install -y linux-nvidia-libs
 ```
+### 3.2.1. Post-installation mounts `linprocfs`, `linsysfs`, `tmpfs`
+Some programs require mounting `linprocfs` (in `/compat/linux/proc`),  some others require mounting `linsysfsf` (in `/compat/linux/sys`), and others require `tmpfs` (in `/compat/linux/dev/shm`). Add below to `vi /etc/fstab`
+```
+linprocfs       /compat/linux/proc      linprocfs       rw      0       0
+linsysfs        /compat/linux/sys       linsysfs        rw      0       0
+tmpfs           /compat/linux/dev/shm   tmpfs           rw,mode=1777      0       0
+```
+Then to mount them one has to, say to mount tmpfs, `mount /compat/linux/dev/shm`.
 ## 3.3. Enable Linux compatibility
 In `vi /etc/rc.conf` add
 ```
