@@ -29,7 +29,8 @@ Then enable it in `vi /etc/rc.conf` with
 ```
 sddm_enable="YES"
 ```
-
+**Tip**
+Shortcut to return to console `CTRL`**+**`ALT`**+**`F1`
 # 5. Troubleshooting
 
 ## 5.1. Reset KDE Plasma Taskbar (panel with widgets) to default
