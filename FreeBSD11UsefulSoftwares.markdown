@@ -50,6 +50,11 @@ pkg install -y kalzium
 pkg install -y transmission
 ```
 
+### 1.11. Install [`geany`](https://www.freshports.org/devel/geany/) and [`geany-plugin-markdown`](https://www.freshports.org/devel/geany-plugin-markdown/)
+```
+pkg install -y geany geany-plugin-markdown
+```
+
 ## 2. Programming Environment
 ### 2.1. Clojure
 #### 2.1.1. Install [Leiningen](https://www.freshports.org/devel/leiningen/)
