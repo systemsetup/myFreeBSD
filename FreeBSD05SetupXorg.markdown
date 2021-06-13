@@ -159,3 +159,8 @@ Section "Files"
     FontPath        "/usr/local/share/fonts/webfonts/"
 EndSection
 ```
+## After either Method-1 or 2
+### To view dingbats unicode (eg. in web browser)
+```
+pkg install twemoji-color-font-ttf
+```
