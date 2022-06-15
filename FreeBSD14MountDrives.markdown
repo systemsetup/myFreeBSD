@@ -221,8 +221,8 @@ mkdir /my_second_hdd
 
 *Note*: If there is a typo in `fstab` reboot will result in single-user-mode, i.e. read-only. To correct the `fstab` file
 ```
-mount -u rw /
-zfs mount -a # change to ufs if the drive with the OS use this filesystem
+mount -u rw /   # without rw you will be unable to save the edited file
+zfs mount -a    # change to ufs if the drive with the OS use this filesystem
 vi /etc/fstab
 ```
 
