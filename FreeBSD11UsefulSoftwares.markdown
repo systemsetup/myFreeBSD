@@ -65,6 +65,8 @@ pkg install leiningen
 ```
 pkg install intellij
 ```
+*NOTE*: To setup for REPL, **File > Project Structure > Modules** and under **Module SDK** pull-down menu pick **Add SDK > JDK** and choose the installed location of openjdkX. To find where openjdkX is installed use `pkg info`; example, `pkg info openjdk17` or `pkg info -f openjdk17`.
+
 ### 2.2. Python
 #### 2.2.1. Install [`PyCharm`](https://www.freshports.org/devel/pycharm-ce/)
 ```
