@@ -219,6 +219,13 @@ mkdir /my_second_hdd
 /dev/ada0p1	  /my_second_hdd	  ufs	  rw	  2	  2
 ```
 
+*Note*: If there is a typo in `fstab` reboot will result in single-user-mode, i.e. read-only. To correct the `fstab` file
+```
+mount -u rw /
+zfs mount -a # change to ufs if the drive with the OS use this filesystem
+vi /etc/fstab
+```
+
 ## Mount usb drives.
 
 ### Setup to mount usb drives (especially for non-root users) [*Carefully* read the pre-requisite.](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/usb-disks.html)
