@@ -16,8 +16,17 @@ Output should look something like `FreeBSD 12.1-RELEASE-p1 amd64`.
 - ~~Although FreeBSD can build and run the pure 64-bit version of wine it still doesn't support WoW64 which is necessary for the overwhelming majority of Windows apps, AMD64 systems still need to use the 32-bit package.~~
 
 ## 1.2. [Install](https://docs.freebsd.org/en/books/handbook/wine/)
+First,
 ```
 pkg install -y wine-gecko wine-mono wine
+```
+alternatively
+```
+pkg install -y wine-gecko-devel wine-mono-devel wine-devel
+```
+Then, as a normal user (not root)
+```
+/usr/local/share/wine/pkg32.sh install wine mesa-dri
 ```
 
 # 2. Useful wine commands
