@@ -87,5 +87,17 @@ portsnap fetch update
   Configuration files for your ports will usually be in `/usr/local/etc`.
   
   Check the [`hier` manual](https://www.freebsd.org/cgi/man.cgi?query=hier&ektion=&manpath=) for the full layout.
+
+  ## Troubleshoot
+
+  1. Running `pkg install pkg-name` returns
+     ```
+     process with pid 1677 still holds the lock
+     process with pid 1677 still holds the lock
+     process with pid 1677 still holds the lock
+     process with pid 1677 still holds the lock
+     ```
+     * Run `ps -p 1677` to find installation package locking it
+     * Wait for it to finish or kill it manually or using the command ` killall "who"`
   
   
