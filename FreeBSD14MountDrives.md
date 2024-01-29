@@ -289,5 +289,13 @@ mount -t ntfs-3g /dev/da0s1 /mnt/flashmedia
 ```
 umount /mnt/flashmedia
 ```
-
+### Automount
+Install [automount](https://www.freshports.org/sysutils/automount)
+```
+pkg install automount
+```
+Activate *automount*
+```
+service devd restart
+```
 
