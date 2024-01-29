@@ -1,7 +1,7 @@
 Refer to the [documentation.](https://www.freebsd.org/doc/handbook/x11-wm.html)
 
 # 1. Install [`kde`](https://kde.org/) windows manager.
-Using [`pkg`](https://www.freshports.org/x11-wm/kde5) just do
+Using [`pkg`](https://www.freshports.org/x11/kde5) just do
 ```
 pkg install kde5
 ```
