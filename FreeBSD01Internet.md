@@ -86,11 +86,21 @@ network={
   ssid=""
   key_mgmt=NONE
   priority
+}
 ```
   - If your wireless is `wep`
     * `wep_key0` value *should not be in quotes*.
     * set `wep_tx_keyidx=0`
     * `key_mgmt=NONE` cannot be omitted
+  - For *hidden* SSID
+    ```
+    network={
+        ssid="name_of_hidden_ssid"
+        scan_ssid=1
+        key_mgmt=WPA-PSK
+        psk="password_here"
+    }
+    ```
   - For more on wireless refer to [handbook](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/network-wireless.html)
     and [here](https://srobb.net/fbsdquickwireless.html)
     and [also here.](http://www.thegeekstuff.com/2009/11/ping-tutorial-13-effective-ping-command-examples/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+TheGeekStuff+(The+Geek+Stuff))
