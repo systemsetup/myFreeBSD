@@ -24,8 +24,8 @@
 | **m**achine hardware          | `uname -m`             |
 | **p**rocessor architecture    | `uname -p`             |
 | **a**ll the above info        | `uname -a`             |
-| cpu information               | `dmesg \| grep CPU`    |
-| real and available memory     | `dmesg \| grep memory` |
+| cpu information               | `grep -i cpu /var/run/dmesg.boot` |
+| real and available memory     | `grep memory /var/run/dmesg.boot` |
 | connected devices information | `geom disk list`       |
 | see availabe hard drive space | `df -h`                |
 | battery life/status           | `apm`                  |
