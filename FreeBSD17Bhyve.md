@@ -21,3 +21,75 @@
    ```
    vm init
    ```
+
+## Virtualize OS
+
+### [Linux](https://docs.freebsd.org/en/books/handbook/virtualization/#virtualization-bhyve-linux) (Fedora)
+
+1. Create a file to use as the virtual disk for the guest machine
+   ```
+   truncate -s 16G myFedora.img
+   ```
+   * [`truncate`](https://man.freebsd.org/cgi/man.cgi?query=truncate&sektion=1&format=html) creates the virtual disk storage.
+   * Here, 16 GB volume is used.
+2. Create `vi device.map` (to map virtual devices to the files of the host system using [sysutils/grub2-bhyve](https://www.freshports.org/sysutils/grub2-bhyve))
+   ```
+   (hd0) ./myFedora.img
+   (cd0) ./some_Fedora_version.iso
+   ```
+4. Start the virtual machine (pre-installed Linux)
+   * Load the kernel from the iso using grub
+     ```
+     grub-bhyve -m device.map -r cd0 -M 1024M linuxguest
+     ```
+     - 1 GB RAM is allocated to the guest machine with the name "linuxguest"
+     - This will start grub.
+     - A menu will be displayed if the installation CD (iso) contains a grub.cfg
+       + Otherwise, manually locate and load the files, `vmlinuz` and `initrd`
+         ```
+         grub> ls
+         (hd0) (cd0) (cd0,msdos1) (host)
+         grub> ls (cd0)/isolinux
+         boot.cat boot.msg grub.conf initrd.img isolinux.bin isolinux.cfg memtest
+         splash.jpg TRANS.TBL vesamenu.c32 vmlinuz
+         grub> linux (cd0)/isolinux/vmlinuz
+         grub> initrd (cd0)/isolinux/initrd.img
+         grub> boot
+         ```
+   * Start the guest machine
+     ```
+     bhyve -A -H -P -s 0:0,hostbridge -s 1:0,lpc -s 2:0,virtio-net,tap0 -s 3:0,virtio-blk,./myFedora.img \
+     -s 4:0,ahci-cd,./some_Fedora_version.iso -l com1,stdio -c 4 -m 1024M linuxguest
+     ```
+     - The system will boot and start the installer.
+     - After installation, reboot the virtual machine. This will cause bhyve to exit.
+5. Destroy the virtual machine instance
+   ```
+   bhyvectl --destroy --vm=linuxguest
+   ```
+   * Before restarting the virtual machine its instance must be destroyed
+6. Start the virtual machine (post-installed Linux)
+   * Load the kernel
+     ```
+     grub-bhyve -m device.map -r hd0,msdos1 -M 1024M linuxguest
+     grub> ls
+     (hd0) (hd0,msdos2) (hd0,msdos1) (cd0) (cd0,msdos1) (host)
+     (lvm/VolGroup-lv_swap) (lvm/VolGroup-lv_root)
+     grub> ls (hd0,msdos1)/
+     lost+found/ grub/ efi/ System.map-2.6.32-431.el6.x86_64 config-2.6.32-431.el6.x
+     86_64 symvers-2.6.32-431.el6.x86_64.gz vmlinuz-2.6.32-431.el6.x86_64
+     initramfs-2.6.32-431.el6.x86_64.img
+     grub> linux (hd0,msdos1)/vmlinuz-2.6.32-431.el6.x86_64 root=/dev/mapper/VolGroup-lv_root
+     grub> initrd (hd0,msdos1)/initramfs-2.6.32-431.el6.x86_64.img
+     grub> boot
+     ```
+   * Start the machine
+     ```
+     bhyve -A -H -P -s 0:0,hostbridge -s 1:0,lpc -s 2:0,virtio-net,tap0 \
+     -s 3:0,virtio-blk,./myFedora.img -l com1,stdio -c 4 -m 1024M linuxguest
+     ```
+     - The system will boot and present a login prompt.
+     - When finished using the virtual machine destroy the instance
+       ```
+       bhyvectl --destroy --vm=linuxguest
+       ```
