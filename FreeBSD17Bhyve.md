@@ -34,6 +34,13 @@
    ```
    kldload vmm
    ```
+   * load at boot time in `vi /boot/loader.conf`
+     ```
+     vmm_load="YES"
+     nmdm_load="YES"
+     if_tap_load="YES"
+     if_bridge_load="YES"
+     ```
 2. Configure the host system
    * create a tap interface for the network device in the virtual machine to attach to
      ```
