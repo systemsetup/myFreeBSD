@@ -38,7 +38,6 @@
      - then configure it
        ```
        sysctl net.link.tap.up_on_open=1
-       net.link.tap.up_on_open: 0 -> 1
        ```
    * create a bridge interface for the network device to participate in the network
      ```
