@@ -8,6 +8,10 @@
    ```
    pkg install grub2-bhyve
    ```
+3. Enable virtualization support in `vi /boot/loader.conf`
+   ```
+   vmm_load=”YES”
+   ```
 1. Run the command
    ```
    pkg install vm-bhyve
