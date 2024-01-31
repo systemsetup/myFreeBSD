@@ -26,18 +26,49 @@
 
 ### [Linux](https://docs.freebsd.org/en/books/handbook/virtualization/#virtualization-bhyve-linux) (Fedora)
 
-1. Create a file to use as the virtual disk for the guest machine
+1. Load bhyve kernel
+   ```
+   kldload vmm
+   ```
+2. Configure the host system
+   * create a tap interface for the network device in the virtual machine to attach to
+     ```
+     ifconfig tap0 create
+     ```
+     - then configure it
+       ```
+       sysctl net.link.tap.up_on_open=1
+       net.link.tap.up_on_open: 0 -> 1
+       ```
+   * create a bridge interface for the network device to participate in the network
+     ```
+     ifconfig bridge0 create
+     ```
+     - then configure it to contain the tap interface and the physical interface (here, `igb0`)
+       ```
+       ifconfig bridge0 addm igb0 addm tap0
+       ```
+       * the available physical interface can be seen using
+         ```
+         ifconfig
+         ifconfig -l
+         ```
+     - turn it on
+       ```
+       ifconfig bridge0 up
+       ```
+3. Create a file to use as the virtual disk for the guest machine
    ```
    truncate -s 16G myFedora.img
    ```
    * [`truncate`](https://man.freebsd.org/cgi/man.cgi?query=truncate&sektion=1&format=html) creates the virtual disk storage.
    * Here, 16 GB volume is used.
-2. Create `vi device.map` (to map virtual devices to the files of the host system using [sysutils/grub2-bhyve](https://www.freshports.org/sysutils/grub2-bhyve))
+4. Create `vi device.map` (to map virtual devices to the files of the host system using [sysutils/grub2-bhyve](https://www.freshports.org/sysutils/grub2-bhyve))
    ```
    (hd0) ./myFedora.img
    (cd0) ./some_Fedora_version.iso
    ```
-4. Start the virtual machine (pre-installed Linux)
+5. Start the virtual machine (pre-installed Linux)
    * Load the kernel from the iso using grub
      ```
      grub-bhyve -m device.map -r cd0 -M 1024M linuxguest
@@ -63,12 +94,12 @@
      ```
      - The system will boot and start the installer.
      - After installation, reboot the virtual machine. This will cause bhyve to exit.
-5. Destroy the virtual machine instance
+6. Destroy the virtual machine instance
    ```
    bhyvectl --destroy --vm=linuxguest
    ```
    * Before restarting the virtual machine its instance must be destroyed
-6. Start the virtual machine (post-installed Linux)
+7. Start the virtual machine (post-installed Linux)
    * Load the kernel
      ```
      grub-bhyve -m device.map -r hd0,msdos1 -M 1024M linuxguest
