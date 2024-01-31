@@ -67,10 +67,21 @@
          ifconfig
          ifconfig -l
          ```
+     - set the interface name to em0bridge for ease of identification
+       ```
+       ifconfig bridge0 name igb0bridge
+       ```
      - turn it on
        ```
-       ifconfig bridge0 up
+       ifconfig igb0bridge up
        ```
+   * set and activate network devices at boot in `vi /etc/rc.conf`
+     ```
+     # byhve and jail settings bridges 
+     cloned_interfaces="bridge0 tap0"
+     ifconfig_bridge0_name="igb0bridge"
+     ifconfig_igb0bridge="addm igb0 addm tap0 up"
+     ```
 3. Create a file to use as the virtual disk for the guest machine
    ```
    truncate -s 16G myFedora.img
