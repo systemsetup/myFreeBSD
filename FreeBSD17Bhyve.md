@@ -101,6 +101,17 @@
          grub> initrd (cd0)/isolinux/initrd.img
          grub> boot
          ```
+      - Note that the option `-M` accepts allocated memory size in MB
+        | in GB | in MB |
+        | ----- | ----- |
+        | 1     | 1024  |
+        | 2     | 2048  |
+        | 4     | 4096  |
+        | 6     | 6144  |
+        | 8     | 8192  |
+        | 16    | 16384 |
+        | 32    | 32768 |
+        + More conversions [here](https://www.flightpedia.org/convert/data-storage.html)
    * Start the guest machine
      ```
      bhyve -A -H -P -s 0:0,hostbridge -s 1:0,lpc -s 2:0,virtio-net,tap0 -s 3:0,virtio-blk,./myFedora.img \
