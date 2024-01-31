@@ -43,6 +43,10 @@
        ```
        sysctl net.link.tap.up_on_open=1
        ```
+       + make it permanent in `vi /etc/sysctl.conf`
+         ```
+         net.link.tap.up_on_open=1
+         ``` 
    * create a bridge interface for the network device to participate in the network
      ```
      ifconfig bridge0 create
@@ -51,7 +55,7 @@
        ```
        ifconfig bridge0 addm igb0 addm tap0
        ```
-       * the available physical interface can be seen using
+       + the available physical interface can be seen using
          ```
          ifconfig
          ifconfig -l
