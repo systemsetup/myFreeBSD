@@ -26,6 +26,7 @@
 | **a**ll the above info        | `uname -a`             |
 | cpu information               | `grep -i cpu /var/run/dmesg.boot` |
 | real and available memory     | `grep memory /var/run/dmesg.boot` |
+| cpu temperature               | `sysctl -a \| grep temperature` |
 | connected devices information | `geom disk list`       |
 | see availabe hard drive space | `df -h`                |
 | battery life/status           | `apm`                  |
