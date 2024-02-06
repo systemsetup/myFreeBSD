@@ -104,12 +104,11 @@
        + Otherwise, manually locate and load the files, `vmlinuz` and `initrd`
          ```
          grub> ls
-         (hd0) (cd0) (cd0,msdos1) (host)
-         grub> ls (cd0)/isolinux
-         boot.cat boot.msg grub.conf initrd.img isolinux.bin isolinux.cfg memtest
-         splash.jpg TRANS.TBL vesamenu.c32 vmlinuz
-         grub> linux (cd0)/isolinux/vmlinuz
-         grub> initrd (cd0)/isolinux/initrd.img
+         (hd0) (cd0) (cd0,gpt3) (cd0,gpt2) (cd0,gpt1) (host)
+         grub> ls (cd0)/images/pxeboot/
+         initrd.img vmlinuz
+         grub> linux (cd0)/images/pxeboot/vmlinuz
+         grub> initrd (cd0)/images/pxeboot/initrd.img
          grub> boot
          ```
       - Note that the option `-M` accepts allocated memory size in MB
@@ -140,11 +139,14 @@
      ```
      grub-bhyve -m device.map -r hd0,msdos1 -M 1024M linuxguest
      grub> ls
-     (hd0) (cd0) (cd0,gpt3) (cd0,gpt2) (cd0,gpt1) (host)
-     grub> ls (cd0)/images/pxeboot/
-     initrd.img vmlinuz
-     grub> linux (cd0)/images/pxeboot/vmlinuz
-     grub> initrd (cd0)/images/pxeboot/initrd.img
+     (hd0) (hd0,msdos2) (hd0,msdos1) (cd0) (cd0,msdos1) (host)
+     (lvm/VolGroup-lv_swap) (lvm/VolGroup-lv_root)
+     grub> ls (hd0,msdos1)/
+     lost+found/ grub/ efi/ System.map-2.6.32-431.el6.x86_64 config-2.6.32-431.el6.x86_64
+     symvers-2.6.32-431.el6.x86_64.gz vmlinuz-2.6.32-431.el6.x86_64
+     initramfs-2.6.32-431.el6.x86_64.img
+     grub> linux (hd0,msdos1)/vmlinuz-2.6.32-431.el6.x86_64 root=/dev/mapper/VolGroup-lv_root
+     grub> initrd (hd0,msdos1)/initramfs-2.6.32-431.el6.x86_64.img
      grub> boot
      ```
    * Start the machine
