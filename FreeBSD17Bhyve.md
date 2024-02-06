@@ -67,7 +67,7 @@
          ifconfig
          ifconfig -l
          ```
-     - set the interface name to em0bridge for ease of identification
+     - set the interface name to `igb0bridge` for ease of identification
        ```
        ifconfig bridge0 name igb0bridge
        ```
