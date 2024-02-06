@@ -93,6 +93,14 @@
    (hd0) ./myFedora.img
    (cd0) ./some_Fedora_version.iso
    ```
+6. ```
+   bhyve -AHP -s 0:0,hostbridge -s 1:0,lpc \
+   -s 2:0,virtio-net,tap0 \
+   -s 3:0,virtio-blk,/hdd/vm-bhyve/Fedora.img \
+   -s 4:0,ahci-cd,/hdd/vm-bhyve/Fedora-Workstation-Live-x86_64-39-1.5.iso -c 4 -m 16384M \
+   -l bootrom,/usr/local/share/uefi-firmware/BHYVE_UEFI_CSM.fd \
+   guest
+   ```
 5. Start the virtual machine (pre-installed Linux)
    * Load the kernel from the iso using grub
      ```
