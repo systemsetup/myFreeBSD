@@ -134,7 +134,7 @@ network={
 2. Enter below to `vi /etc/rc.conf`
 ```
 hostname="my.server.com"
-ifconfig_igb0="DHCP"
+ifconfig_em0="DHCP"
 ```
 3. Enter `http://192.168.8.1` in the address bar of a browser.
 4. Set-up and get connected.
