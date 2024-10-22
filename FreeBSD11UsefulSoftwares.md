@@ -25,7 +25,11 @@ pkg install kile
 ```
 pkg install mupdf
 ```
-### 1.6. Install [`mutt`](https://www.freshports.org/mail/mutt)
+### 1.6. Install [`zotero`](https://www.freshports.org/science/zotero); reference management software to manage bibliographic data.
+```
+pkg install zotero
+```
+### 1.7. Install [`mutt`](https://www.freshports.org/mail/mutt)
 ```
 pkg install mutt
 ```
@@ -33,24 +37,24 @@ To connect to gmail you will also need [openssl](https://www.freshports.org/secu
 ```
 pkg install -y openssl
 ```
-### 1.7. Install [`homebank`](https://www.freshports.org/finance/homebank/)
+### 1.8. Install [`homebank`](https://www.freshports.org/finance/homebank/)
 ```
 pkg install -y homebank
 ```
-### 1.8. Install [`zim`](https://www.freshports.org/deskutils/zim)
+### 1.9. Install [`zim`](https://www.freshports.org/deskutils/zim)
 ```
 pkg install -y zim
 ```
-### 1.9. Install [`kalzium`](https://www.freshports.org/science/kalzium/)
+### 1.10. Install [`kalzium`](https://www.freshports.org/science/kalzium/)
 ```
 pkg install -y kalzium
 ```
-### 1.10. Install [`transmission`](https://www.freshports.org/net-p2p/transmission/)
+### 1.11. Install [`transmission`](https://www.freshports.org/net-p2p/transmission/)
 ```
 pkg install -y transmission
 ```
 
-### 1.11. Install [`geany`](https://www.freshports.org/devel/geany/) and [`geany-plugin-markdown`](https://www.freshports.org/devel/geany-plugin-markdown/)
+### 1.12. Install [`geany`](https://www.freshports.org/devel/geany/) and [`geany-plugin-markdown`](https://www.freshports.org/devel/geany-plugin-markdown/)
 ```
 pkg install -y geany geany-plugin-markdown
 ```
