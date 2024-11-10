@@ -44,7 +44,7 @@ then, reboot to enter the updated system.
      ```
      portmaster -af
      ```
-4. Tie up upgrading processesloose ends
+4. Tie up loose ends
   ```
   freebsd-update install
   ```
