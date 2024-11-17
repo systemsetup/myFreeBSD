@@ -59,6 +59,11 @@ pkg install -y transmission
 pkg install -y geany geany-plugin-markdown
 ```
 
+### 1.13. Install [`R`](https://www.freshports.org/math/R/) and [`RStudio`](https://www.freshports.org/devel/RStudio/)
+```
+pkg install -y R RStudio
+```
+
 ## 2. Programming Environment
 ### 2.1. Clojure
 #### 2.1.1. Install [Leiningen](https://www.freshports.org/devel/leiningen/)
