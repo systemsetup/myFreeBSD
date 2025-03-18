@@ -81,6 +81,16 @@ pkg install intellij
 ```
 pkg install pycharm-ce
 ```
+
+### 2.3. Rust
+#### 2.3.1. Install [rust](https://www.freshports.org/lang/rust)
+```
+pkg install rust
+```
+#### 2.3.2. Install [`RustRover`](https://www.freshports.org/devel/jetbrains-rustrover/)
+```
+pkg install jetbrains-rustrover
+```
 ### 2.3. Docker environment
 #### 2.3.1. Install [docker client](https://www.freshports.org/sysutils/docker/)
 ```
