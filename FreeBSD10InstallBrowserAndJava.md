@@ -1,6 +1,7 @@
 # [Install JAVA & Browser](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/desktop-browsers.html).
 
 1. JAVA as [OpenJDK](https://www.freshports.org/search.php?query=openjdk&search=go&num=10&stype=name&method=match&deleted=excludedeleted&start=1&casesensitivity=caseinsensitive) in place of the binary Oracle JRE.
+
 [OpenJDK8](http://www.freshports.org/java/openjdk8)
 ```
 pkg install openjdk8
