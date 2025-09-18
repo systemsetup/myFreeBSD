@@ -45,7 +45,7 @@ pkg install lynx
 ```
 
 ## Change default Java version
-Based on the [commands](https://man.freebsd.org/cgi/man.cgi?query=javavm&manpath=FreeBSD+12.1-RELEASE+and+Ports)
+Based on the [commands](https://man.freebsd.org/cgi/man.cgi?query=javavm&manpath=FreeBSD+12.1-RELEASE+and+Ports#end)
 1. Check for current version used
 ```
 JAVAVM_DRYRUN=yes java
