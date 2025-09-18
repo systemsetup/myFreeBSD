@@ -1,9 +1,15 @@
 # [Install JAVA & Browser](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/desktop-browsers.html).
 
-1. JAVA as [OpenJDK](http://www.freshports.org/java/openjdk8) in place of the binary Oracle JRE.
+1. JAVA as [OpenJDK](https://www.freshports.org/search.php?query=openjdk&search=go&num=10&stype=name&method=match&deleted=excludedeleted&start=1&casesensitivity=caseinsensitive) in place of the binary Oracle JRE.
+[OpenJDK8](http://www.freshports.org/java/openjdk8)
 ```
 pkg install openjdk8
 ```
+[OpenJDK24](http://www.freshports.org/java/openjdk24)
+```
+pkg install openjdk24
+```
+
 
 2. [IcedTea-Web](http://www.freshports.org/java/icedtea-web) project provides a Free Software web browser plugin
 running applets written in the Java.
