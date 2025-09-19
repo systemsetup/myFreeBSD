@@ -66,3 +66,35 @@ cat /usr/local/etc/javavms
 ```
 JAVA_VERSION=24+ javac MyClass.java
 ```
+4. Set a specific Java version
+For JDK or JRE the operating system environment variable is `JAVA_HOME`.
+That is, Java application use this variable to find where the runtime (JVM) is installed.
+
+4.1. set the value of `JAVA_HOME` to desired Java version
+In FreeBSD, you set `JAVA_HOME` environment in `/etc/csh.cshrc` such that the variable value
+is determined from running `cat /usr/local/etc/javavms`.
+
+For example, for setting OpenJDK24 as the default Java version, do `vi /etc/csh.cshrc` and enter
+```
+# System-wide .cshrc file for csh(1).
+setenv JAVA_HOME /usr/local/openjdk24
+setenv PATH $JAVA_HOME/bin:$PATH
+```
+
+4.2. Make the path `/etc/csh.cshrc` available to source
+```
+source /etc/csh.cshrc
+```
+
+4.3. Switch to another Java version (e.g. OpenJDK17)
+```
+# System-wide .cshrc file for csh(1).
+setenv JAVA_HOME /usr/local/openjdk17
+setenv PATH $JAVA_HOME/bin:$PATH
+```
+Then, repeat 4.2. to make the new path available to source.
+
+4.4. Check the Java version
+```
+java -version
+```
