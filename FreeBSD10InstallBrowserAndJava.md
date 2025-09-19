@@ -50,6 +50,10 @@ Based on the [commands](https://man.freebsd.org/cgi/man.cgi?query=javavm&manpath
 ```
 JAVAVM_DRYRUN=yes java
 ```
+Alternatively,
+```
+java -version
+```
 2. Check if the desired version is installed (e.g. OpenJDK24)
 ```
 JAVAVM_DRYRUN=yes JAVA_VERSION=24 java
@@ -58,7 +62,7 @@ Alternatively, get the list of installed Java versions using
 ```
 cat /usr/local/etc/javavms
 ```
-3. Set for specific Java version
+3. Compile a `MyClass.java` using a specific Java version (e.g. &ge; OpenJDK24)
 ```
 JAVA_VERSION=24+ javac MyClass.java
 ```
