@@ -85,7 +85,8 @@ The variable value is determined from running `cat /usr/local/etc/javavms`.
   ```
 * For Boune shell you set `JAVA_HOME` environment in `/usr/home/<username>/.profile` (which is the same as `~/.profile`
   ```
-  JAVA_HOME=/usr/local/openjdk24
+  export JAVA_HOME=/usr/local/openjdk24
+  export PATH="$JAVA_HOME/bin:$PATH$
   ```
 * Determine what shell is used in your console/terminal
   ```echo $SHELL```
