@@ -71,8 +71,11 @@ For JDK or JRE the operating system environment variable is `JAVA_HOME`.
 That is, Java application use this variable to find where the runtime (JVM) is installed.
 
 4.1. set the value of `JAVA_HOME` to desired Java version
-In FreeBSD, you set `JAVA_HOME` environment in `/etc/csh.cshrc` such that the variable value
-is determined from running `cat /usr/local/etc/javavms`.
+In FreeBSD, you set `JAVA_HOME` environment in
+* `/etc/csh.cshrc` for all users
+* `/usr/home/<user>/.cshrc` for a specific user
+
+such that the variable value is determined from running `cat /usr/local/etc/javavms`.
 
 For example, for setting OpenJDK24 as the default Java version, do `vi /etc/csh.cshrc` and enter
 ```
