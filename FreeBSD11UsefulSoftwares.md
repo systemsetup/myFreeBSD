@@ -70,6 +70,23 @@ pkg install -y R RStudio
 ```
 pkg install leiningen
 ```
+But as of this writing [Leiningen](https://www.freshports.org/devel/leiningen/) depends on OpenJDK8.
+However, some Clojure projects may depend on packages (Clojure or Java packages) that uses Java classes
+that require newer Java compilers. Then, install [Leiningen](https://leiningen.org/) without using the`pkg` approach.
+
+* Install the [latest OpenJDK](https://github.com/systemsetup/myFreeBSD/blob/master/FreeBSD10InstallBrowserAndJava.md#install-java--browser)
+* Set the default version to the [latest version](https://github.com/systemsetup/myFreeBSD/blob/master/FreeBSD10InstallBrowserAndJava.md#change-default-java-version)
+* Download the [lein script](https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein)
+* As superuser copy the lein script to path `/usr/local/bin/`
+  
+  ```cp /home/lungsi/Downloads/lein /usr/local/bin/```
+* Set it to be executable
+  
+  ```chmod a+x /usr/local/bin/lein```
+* Run the lein script as a normal user
+  
+  ```/usr/local/bin/lein```
+
 #### 2.1.2. Install [`intellij IDEA`](https://www.freshports.org/java/intellij/)
 ```
 pkg install intellij
